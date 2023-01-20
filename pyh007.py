@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title(':blue[P.yonghun] is back : and :sunglasses: ')
+st.title(':blue[P.yonghun] is back :sunglasses: ')
 
 
 #plt.figure(figsize=(12,8))
