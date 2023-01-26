@@ -9,6 +9,8 @@ st.title(':blue[P.yonghun] is back :sunglasses: ')
 
 money = pd.read_csv("money_data7.csv")
 
+st.sidebar.success("Select a demo above.")
+
 # 년도 선택 박스 넣기
 import streamlit as st
 
