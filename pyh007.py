@@ -1,22 +1,16 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 st.title(':blue[P.yonghun] is back :sunglasses: ')
 
+#money = pd.read_csv("money_data7.csv")
 
-#plt.figure(figsize=(12,8))
-
-money = pd.read_csv("money_data7.csv")
-
-#st.sidebar.success("Select a demo above.")
-
-# 년도 선택 박스 넣기
-import streamlit as st
-
+st.sidebar.success("Select a demo above.")
 
 def  plotting_demo():
-        money = pd.read_csv("money_data7.csv")
+    money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
