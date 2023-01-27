@@ -10,7 +10,11 @@ st.title(':blue[P.yonghun] is back :sunglasses: ')
 st.sidebar.success("Select a demo above.")
 
 def  plotting_demo():
-    money = pd.read_csv("money_data7.csv")
+    
+    uploaded_file = st.file_uploader("Choose a file")
+    
+    money=pd.read_csv(uploaded_file)
+    #money = pd.read_csv("money_data7.csv")
     option = st.selectbox(
         'How would you like to choice year ?',
         ('2020', '2021', '2022'))
@@ -53,5 +57,8 @@ with st.form(key ='Form1'):
         select_language = st.sidebar.radio('What do you want ?', ('line','bar','pie','histogram','corr','word','box'))
         
         
-if select_language =='line':        
-    plotting_demo()      
+if select_language =='line':           
+    try:
+          plotting_demo()  
+    except:      
+          pass
