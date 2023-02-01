@@ -92,20 +92,18 @@ def bar_chart():
     st.pyplot(fig)
     st.dataframe(df7)
 
-        
+st.set_page_config(layout="centered")      
 
 with st.form(key ='Form1'):
     with st.sidebar:
         
-        select_language = st.sidebar.radio('What do you want ?', ('line','bar','pie','histogram','corr','word','box'))
+        select_language = st.sidebar.radio('데이터 분석 결과', ('금리와 집값 파악하기','한국 야구 순위 와 승률','??'))
         
         
-if select_language =='line':           
-    try:
-          plotting_demo()  
-    except:      
-          pass
+if select_language =='금리와 집값 파악하기':           
+    plotting_demo()  
+
 
         
-elif select_language =='bar':
+elif select_language =='한국 야구 순위 와 승률':
     bar_chart()
