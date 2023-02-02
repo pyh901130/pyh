@@ -125,10 +125,10 @@ if select_language =='금리와 집값 파악하기':
 elif select_language =='한국 야구 순위 와 승률':
     tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
 
-    with tab3:
+    with tab1:
         tab1.subheader("한국 야구 순위 와 승률 chart")
         bar_chart()
         
-    with tab4:
+    with tab2:
         tab2.subheader("한국 야구 순위 와 승률 data")
         st.dataframe(bb) 
