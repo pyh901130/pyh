@@ -123,11 +123,11 @@ if select_language =='금리와 집값 파악하기':
 
         
 elif select_language =='한국 야구 순위 와 승률':
-    tab3, tab4 = st.tabs(["📈 Chart", "🗃 Data"])
+    tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
 
     with tab3:
         tab1.subheader("한국 야구 순위 와 승률 chart")
-        plotting_demo()
+        bar_chart()
         
     with tab4:
         tab2.subheader("한국 야구 순위 와 승률 data")
