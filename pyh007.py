@@ -81,6 +81,11 @@ def bar_chart():
     st.write('You selected:', option)
 
     df7  =  baseball[:] [ baseball.년도==option2 ]
+
+    global bb
+
+    bb = df7
+
     x = df7.팀
     y = df7.승률
     
@@ -94,7 +99,7 @@ def bar_chart():
 
     plt.title( "year korea baseball winrate data", position=(0.5,1.1))
     st.pyplot(fig)
-    st.dataframe(df7)
+    #st.dataframe(df7)
 
 #st.set_page_config(layout="centered")      
 
@@ -118,4 +123,12 @@ if select_language =='금리와 집값 파악하기':
 
         
 elif select_language =='한국 야구 순위 와 승률':
-    bar_chart()
+    tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
+
+    with tab1:
+        tab1.subheader("한국 야구 순위 와 승률 chart")
+        plotting_demo()
+        
+    with tab2:
+        tab2.subheader("한국 야구 순위 와 승률 data")
+        st.dataframe(bb) 
